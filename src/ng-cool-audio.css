@@ -1,0 +1,136 @@
+.ng-cool-audio-container {
+  width: 600px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 20px 15px;
+}
+
+.ncv-audio-left {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  vertical-align: top;
+}
+.ncv-img-container {
+  width: 120px;
+  height: 120px;
+  font-size: 0;
+  overflow: hidden;
+}
+.ncv-img-container img {
+  width: 120px;
+  height: 120px;
+}
+.ncv-audio-right {
+  display: inline-block;
+  width: 455px;
+  height: 120px;
+  vertical-align: top;
+  padding-left: 20px;
+  padding-top: 5px;
+}
+
+.ncv-audio-right-top {
+  position: relative;
+  height: 50px;
+}
+.ncv-header-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: rgba(0,0,0,.8);
+}
+.ncv-header-subtitle {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(0,0,0,.4);
+  font-family: 'Damion', cursive;
+}
+.ncv-audio-sound {
+  position: absolute;
+  top: 0;
+  right: 5px;
+}
+.ncv-audio-sound i {
+  position: relative;
+  top: 4px;
+  padding-right: 6px;
+  cursor: pointer;
+}
+.ncv-audio-sound i:hover {
+  color: rgba(0,0,0,.6);
+}
+.ncv-audio-sound input[type='range'] {
+  -webkit-appearance: none;
+  height: 4px;
+  width: 70px;
+  background-color: #E6E6E6;
+  outline:none;
+}
+.ncv-audio-sound input[type='range']:focus::-webkit-slider-thumb {
+  outline: 1px #999 dotted;
+}
+.ncv-audio-sound input[type='range']::-moz-range-track {
+  -moz-appearance: none;
+  height: 4px;
+  background-color: #E6E6E6;
+  border: none;
+}
+.ncv-audio-sound input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  height: 10px;
+  width: 6px;
+  background-color: #666;
+}
+.ncv-audio-sound input[type='range']::-moz-range-thumb {
+  height: 12px;
+  width: 8px;
+}
+
+.ncv-audio-right-bottom {
+  position: relative;
+  margin-top: 35px;
+}
+.ncv-audio-controls {
+  width: 95px;
+  padding-top: 4px;
+}
+.ncv-progress {
+  position: absolute;
+  left: 100px;
+  top: 0;
+}
+.ncv-progress progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 10px;
+  width: 300px;
+  cursor: pointer;
+}
+.ncv-progress progress[value]::-webkit-progress-bar {
+  background-color: #e6e6e6;
+}
+.ncv-progress progress[value]::-webkit-progress-value {
+  background-color: #009CDF;
+}
+.ncv-progress progress[value]::-moz-progress-bar {
+  background-color: #009CDF;
+}
+
+.ncv-audio-controls i {
+  padding-right: 15px;
+  cursor: pointer;
+}
+.ncv-audio-controls i:hover {
+  color: rgba(0,0,0,.6);
+}
+.ncv-time {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  rgba(0,0,0,.6);
+  padding-top: 4px;
+}

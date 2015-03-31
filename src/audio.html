@@ -1,0 +1,39 @@
+<div class="ng-cool-audio-container">
+  <audio>
+    Your browser seems to be upgraded! :)
+  </audio>
+  <div class="ng-cool-audio-preview">
+    <div class="ncv-audio-left">
+      <div class="ncv-img-container">
+        <img ng-src="{{audio.cover}}" alt="Photo">
+      </div>
+    </div>
+    <div class="ncv-audio-right">
+      <div class="ncv-audio-right-top">
+        <div class="ncv-header">
+          <div class="ncv-header-title">{{audio.author}}</div>
+          <div class="ncv-header-subtitle">{{audio.name}}</div>
+          <div class="ncv-audio-sound">
+            <i class="fa fa-volume-up" ng-show="!isMuted" ng-click="volumeOff()"></i>
+            <i class="fa fa-volume-off" ng-show="isMuted" ng-click="volumeOn()"></i>
+            <input type="range" max="10" min="0" value="5">
+          </div>
+        </div>
+      </div>
+      <div class="ncv-audio-right-bottom">
+        <div class="ncv-audio-controls">
+          <i class="fa fa-backward" ng-click="playBackward()"></i>
+          <i class="fa fa-play" ng-click="play()" ng-show="isPlaying"></i>
+          <i class="fa fa-pause" ng-click="pause()" ng-show="!isPlaying"></i>
+          <i class="fa fa-forward" ng-click="playForward()"></i>
+        </div>
+        <div class="ncv-progress">
+          <progress class="ncv-progress-bar" max="100" value="{{progressValue}}"></progress>
+        </div>
+        <div class="ncv-time">
+          <span class="ncv-current-time">{{currentTime}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
