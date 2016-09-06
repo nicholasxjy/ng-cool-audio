@@ -41,9 +41,9 @@
 }
 .ncv-header-subtitle {
   font-size: 13px;
-  font-weight: 300;
-  color: rgba(0,0,0,.4);
-  font-family: 'Damion', cursive;
+  font-weight: 400;
+  font-style: italic;
+  color: rgba(0,0,0,.65);
 }
 .ncv-audio-sound {
   position: absolute;

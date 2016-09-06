@@ -12,7 +12,7 @@
 						source: '=source'
 					},
 					replace: true,
-					template: '<div class="ng-cool-audio-container"><audio>Your browser seems to be upgraded! :)</audio><div class="ng-cool-audio-preview"><div class="ncv-audio-left"><div class="ncv-img-container"><img ng-src="{{audio.cover}}" alt="Photo"></div></div><div class="ncv-audio-right"><div class="ncv-audio-right-top"><div class="ncv-header"><div class="ncv-header-title">{{audio.author}}</div><div class="ncv-header-subtitle">{{audio.name}}</div><div class="ncv-audio-sound"><i class="fa fa-volume-up" ng-show="!isMuted" ng-click="volumeOff()"></i><i class="fa fa-volume-off" ng-show="isMuted" ng-click="volumeOn()"></i><input type="range" max="10" min="0" value="5"></div></div></div><div class="ncv-audio-right-bottom"><div class="ncv-audio-controls"><i class="fa fa-backward" ng-click="playBackward()"></i><i class="fa fa-play" ng-click="pause()" ng-show="isPlaying"></i><i class="fa fa-pause" ng-click="play()" ng-show="!isPlaying"></i><i class="fa fa-forward" ng-click="playForward()"></i></div><div class="ncv-progress"><progress class="ncv-progress-bar" ng-click="skipProgress($event)" max="100" value="{{progressValue}}"></progress></div><div class="ncv-time"><span class="ncv-current-time">{{currentTime}}</span></div></div></div></div></div>',
+					template: '<div class="ng-cool-audio-container"><audio>Your browser seems to be upgraded! :)</audio><div class="ng-cool-audio-preview"><div class="ncv-audio-left"><div class="ncv-img-container"><img ng-src="{{audio.cover}}" alt="Photo"></div></div><div class="ncv-audio-right"><div class="ncv-audio-right-top"><div class="ncv-header"><div class="ncv-header-title">{{audio.author}}</div><div class="ncv-header-subtitle">{{audio.name}}</div><div class="ncv-audio-sound"><i class="fa fa-volume-up" ng-show="!isMuted" ng-click="volumeOff()"></i><i class="fa fa-volume-off" ng-show="isMuted" ng-click="volumeOn()"></i><input type="range" max="10" min="0" value="5"></div></div></div><div class="ncv-audio-right-bottom"><div class="ncv-audio-controls"><i class="fa fa-backward" ng-click="playBackward()"></i><i class="fa fa-play" ng-click="play()" ng-show="!isPlaying"></i><i class="fa fa-pause" ng-click="pause()" ng-show="isPlaying"></i><i class="fa fa-forward" ng-click="playForward()"></i></div><div class="ncv-progress"><progress class="ncv-progress-bar" ng-click="skipProgress($event)" max="100" value="{{progressValue}}"></progress></div><div class="ncv-time"><span class="ncv-current-time">{{currentTime}}</span></div></div></div></div></div>',
 					controller: ['$scope', '$element', function($scope, $element) {
 						//check source file
 						if (!$scope.source || !$scope.source.audio) {
@@ -52,7 +52,7 @@
                 return;
               }
 							$audio.attr('src', audio.src);
-							$scope.audio.cover = audio.cover || './media/a-lin.png';
+							$scope.audio.cover = audio.cover || 'http://7xj610.com1.z0.glb.clouddn.com/29ce98b4349b72c2778d2f82823159b06f98f8bc.jpeg';
 							$scope.audio.author = audio.author || 'Unknow';
 							$scope.audio.name = audio.name || 'Unknow';
 						}
@@ -79,10 +79,11 @@
 
 							if ($scope.source.config) {
 								if ($scope.source.config.autoplay) {
-									audio.autoplay = true;
+									$audio.attr('autoplay', 'autoplay');
+									$scope.play();
 								}
 								if ($scope.source.config.loop) {
-									audio.loop = true;
+									$audio.attr('loop', 'loop');
 								}
 							}
 						};
